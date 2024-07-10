@@ -26,6 +26,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -57,7 +60,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="red">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -108,6 +118,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -537,11 +573,11 @@ E_{tot} = E_{kin} + E_{mag} + \rho e = \dfrac{1}{2}\rho\mathbf{u}\cdot\mathbf{u}
 \]</div>
 <p>where <span class="arithmatex">\(P_tot\)</span> is the total pressure, defined as the sum of the fluid pressure <span class="arithmatex">\(P\)</span> and the magnetic pressure:</p>
 <div class="arithmatex">\[
-P_{tot} = P + P_{mag} = P + \dfrac{1}{2}\mathbf{B}\cdot\mathbf{B}
+P_{tot} = P_{gas} + P_{mag} = P_{gas} + \dfrac{1}{2}\mathbf{B}\cdot\mathbf{B}
 \]</div>
 <p>The conversion between the primitive and conservative variable is straight-forward except for the conversion between the total energy term and the total pressure term which requires an <strong>equation of state</strong>. For an <strong>ideal gas</strong>, we use the following relation : </p>
 <div class="arithmatex">\[
-e = \dfrac{P}{\rho(\gamma-1)}
+e = \dfrac{P_{gas}}{\rho(\gamma-1)}
 \]</div>
 <p>with <span class="arithmatex">\(\gamma\)</span> the specific heat ratio.</p>
 <h2 id="equations_1">Equations</h2>
@@ -576,7 +612,7 @@ $$</p>
 \dfrac{\partial E_{tot}}{\partial t} + \nabla\cdot([E_{tot}+P_{tot}]\mathbf{u} - \mathbf{B}(\mathbf{B}\cdot\mathbf{u}) - \tau\cdot\mathbf{u} - \kappa \nabla T) = \rho\mathbf{u}\cdot \mathbf{g} + \mathcal{Q}
  $$</li>
 </ul>
-<p>with <span class="arithmatex">\(\kappa\)</span> the thermal diffusion coefficient and <span class="arithmatex">\(T\)</span> the temperature. For an ideal gas EOS we have <span class="arithmatex">\(P = \mathcal{R}\rho T\)</span>. We set <span class="arithmatex">\(\mathcal{R} = 1\)</span> and thus we retrieve the temperature from the primitive variables as <span class="arithmatex">\(T = P/\rho\)</span>. Additionally, a volumetric cooling/heating term can be added in <span class="arithmatex">\(\mathcal{Q}\)</span>.</p>
+<p>with <span class="arithmatex">\(\kappa\)</span> the thermal diffusion coefficient and <span class="arithmatex">\(T\)</span> the temperature. For an ideal gas EOS we have <span class="arithmatex">\(P = \mathcal{R}\rho T\)</span>. We set <span class="arithmatex">\(\mathcal{R} = 1\)</span> and thus we retrieve the temperature from the primitive variables as <span class="arithmatex">\(T = P_{gas}/\rho\)</span>. Additionally, a volumetric cooling/heating term can be added in <span class="arithmatex">\(\mathcal{Q}\)</span>.</p>
 <ul>
 <li><strong>Induction equation</strong> (ideal MHD)
  $$
@@ -603,7 +639,7 @@ $$</p>
  \rho u^2 + P_{tot} - B_x^2 \\
  \rho uv - B_xB_y \\
  \rho uw - B_xB_z \\
- (E_{tot}+P_{tot})u - B_z(\mathbf{u}\cdot\mathbf{B})\\ 
+ (E_{tot}+P_{tot})u - B_x(\mathbf{u}\cdot\mathbf{B})\\ 
  0 \\
  B_yu - B_xv \\
  B_zu - B_xw
