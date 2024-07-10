@@ -12,7 +12,7 @@
         <link rel="prev" href="../equations/">
       
       
-        <link rel="next" href="../about/">
+        <link rel="next" href="../boundary_conditions/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -44,6 +44,8 @@
     
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../css/custom.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -333,6 +335,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#flux-formulation-of-the-thermal-conduction-and-viscosity-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flux formulation of the thermal conduction and viscosity terms:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solvers-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solvers implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#future-considerations" class="md-nav__link">
     <span class="md-ellipsis">
       Future considerations
@@ -365,11 +385,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../boundary_conditions.md" class="md-nav__link">
+      <a href="../boundary_conditions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Boundary Conditions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tests.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tests and validations
   </span>
   
 
@@ -390,6 +430,26 @@
   
   <span class="md-ellipsis">
     Setups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmarks.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Benchmarks
   </span>
   
 
@@ -493,6 +553,24 @@
   <a href="#timestep-calculation" class="md-nav__link">
     <span class="md-ellipsis">
       Timestep calculation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flux-formulation-of-the-thermal-conduction-and-viscosity-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flux formulation of the thermal conduction and viscosity terms:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solvers-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solvers implementation
     </span>
   </a>
   
@@ -645,6 +723,10 @@ c_p = \sqrt{c_rc_h}
 \]</div>
 <p>The value of <span class="arithmatex">\(c_r\)</span> is left to the user, but by default is set to <span class="arithmatex">\(0.1\)</span> (see discussion after eq (46) in (Dedner 2002) for more information on this parameter).</p>
 <h2 id="timestep-calculation">Timestep calculation</h2>
+<p>TODO</p>
+<h2 id="flux-formulation-of-the-thermal-conduction-and-viscosity-terms">Flux formulation of the thermal conduction and viscosity terms:</h2>
+<p>TODO</p>
+<h2 id="solvers-implementation">Solvers implementation</h2>
 <p>TODO</p>
 <h2 id="future-considerations">Future considerations</h2>
 <ul>
