@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../equations/">
       
       
-        <link rel="next" href="../solvers/">
+        <link rel="next" href="../about/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Equations - Dyablo-Whole Sun</title>
+        <title>Solvers - Dyablo-Whole Sun</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#equations" class="md-skip">
+        <a href="#solvers-and-discretization" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Equations
+              Solvers
             
           </span>
         </div>
@@ -210,6 +210,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../equations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Equations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -226,7 +246,7 @@
           
   
   <span class="md-ellipsis">
-    Equations
+    Solvers
   </span>
   
 
@@ -237,7 +257,7 @@
         
   
   <span class="md-ellipsis">
-    Equations
+    Solvers
   </span>
   
 
@@ -259,36 +279,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#variables" class="md-nav__link">
+  <a href="#discretization" class="md-nav__link">
     <span class="md-ellipsis">
-      Variables
+      Discretization
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#equations_1" class="md-nav__link">
+  <a href="#time-stepping" class="md-nav__link">
     <span class="md-ellipsis">
-      Equations
+      Time stepping
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hyperbolic-fluxes" class="md-nav__link">
+  <a href="#hyperbolic-flux-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      Hyperbolic fluxes
+      Hyperbolic flux calculation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#source-terms" class="md-nav__link">
+  <a href="#interface-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Source Terms
+      Interface values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solenoidal-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solenoidal constraint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timestep-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timestep calculation
     </span>
   </a>
   
@@ -303,30 +341,19 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../solvers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Solvers
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -418,36 +445,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#variables" class="md-nav__link">
+  <a href="#discretization" class="md-nav__link">
     <span class="md-ellipsis">
-      Variables
+      Discretization
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#equations_1" class="md-nav__link">
+  <a href="#time-stepping" class="md-nav__link">
     <span class="md-ellipsis">
-      Equations
+      Time stepping
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hyperbolic-fluxes" class="md-nav__link">
+  <a href="#hyperbolic-flux-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      Hyperbolic fluxes
+      Hyperbolic flux calculation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#source-terms" class="md-nav__link">
+  <a href="#interface-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Source Terms
+      Interface values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solenoidal-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solenoidal constraint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timestep-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timestep calculation
     </span>
   </a>
   
@@ -457,6 +502,15 @@
   <a href="#future-considerations" class="md-nav__link">
     <span class="md-ellipsis">
       Future considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -477,83 +531,90 @@
                   
 
 
-<h1 id="equations">Equations</h1>
-<h2 id="variables">Variables</h2>
-<p>As of 2024, the Dyablo Whole-Sun branch solves the magnetohydrodynamics equations with viscosity and thermal conduction. The code evolves a set of equations expressed as conservative variables <span class="arithmatex">\(\mathbf{U}\)</span> or primitive variables <span class="arithmatex">\(\mathbf{Q}\)</span>. </p>
-<p>The <strong>conservative variables</strong> are the following : </p>
+<h1 id="solvers-and-discretization">Solvers and discretization</h1>
+<p>This page describes the solver implemented in Dyablo-Whole Sun.</p>
+<h2 id="discretization">Discretization</h2>
+<p>We employ a finite-volume discretization of space. Considering a physical solution for the <a href="../equations/">equations</a> under the form of a conservative variable vector space $\mathbf{\tilde{U(x, y, z, t)}} defined on every point of space at a given time <span class="arithmatex">\(t\)</span> we represent the solution as volume averages on a (adaptive) grid. For an element <span class="arithmatex">\(\mathbf{i}\)</span> of this grid spanning from <span class="arithmatex">\([x_{\mathbf{i}-(1/2,0,0)}, y_{\mathbf{i}-(0,1/2,0)}, z_{\mathbf{i}-(0,0,1/2)}]\)</span> to <span class="arithmatex">\([x_{\mathbf{i}+(1/2,0,0)}, y_{\mathbf{i}+(0,1/2,0)}, z_{\mathbf{i}+(0,0,1/2)}]\)</span> we approximate the physical solution as :</p>
 <div class="arithmatex">\[
-\mathbf{U} = [\rho, \rho \mathbf{u}, E_{tot}, \mathbf{B}]^T
+\mathbf{U}_{\mathbf{i}}(t) = \dfrac{1}{V_{\mathbf{i}}}\int\int\int \mathbf{\tilde{U}}(x, y, z, t)dxdydz
 \]</div>
-<p>with <span class="arithmatex">\(\rho\)</span> the density, <span class="arithmatex">\(\mathbf{u}\)</span> the fluid velocity, <span class="arithmatex">\(E\)</span>, the total energy and <span class="arithmatex">\(\mathbf{B}\)</span> the magnetic field. The total energy is expressed as </p>
+<p>Where <span class="arithmatex">\(V_{\mathbf{i}}\)</span> is the volume of the element of the grid at index <span class="arithmatex">\(\mathbf{i}\)</span></p>
+<h2 id="time-stepping">Time stepping</h2>
+<p>For now, only explicit time-stepping is available in Dyablo. The calculations splits the hyperbolic, the parabolic and the source terms in different updates. We use operator splitting operations to separate all treatments. The two solvers available for now are a first order forward Euler method and a strong-stability preserving second order Runge-Kutta scheme. To evolve from a time given at iteration <span class="arithmatex">\(n\)</span> to the next iteration <span class="arithmatex">\(n+1\)</span> at time <span class="arithmatex">\(t+\Delta t\)</span>, we write the semi-discretized formulation for the hyperbolic terms of these schemes as the following [the formulation stays similar for the parabolic and source terms]:</p>
+<p><strong>First order Euler integrator:</strong></p>
 <div class="arithmatex">\[
-E_{tot} = E_{kin} + E_{mag} + \rho e = \dfrac{1}{2}\rho\mathbf{u}\cdot\mathbf{u} + \dfrac{1}{2}\mathbf{B}\cdot\mathbf{B} + \rho e
+\mathbf{U}^{n+1}_\mathbf{i} = \mathbf{U}^n_\mathbf{i} - \Delta t (\nabla \cdot \mathbf{F}(\mathbf{U}_\mathbf{i}))
 \]</div>
-<p>Where <span class="arithmatex">\(e\)</span> is the internal energy defined by the equation of state.</p>
-<p>The <strong>primitive variables</strong> are defined as</p>
+<p><strong>Second order strong-stability preserving Runge-Kutta:</strong></p>
 <div class="arithmatex">\[
-\mathbf{Q} = [\rho, \mathbf{u}, P_{tot}, \mathbf{B}]^T
+\mathbf{U}^*_\mathbf{i} = \mathbf{U}^n_\mathbf{i} - \Delta t (\nabla \cdot \mathbf{F}(\mathbf{U})) \\
+\mathbf{U}^{n+1}_\mathbf{i} = \dfrac{1}{2}(\mathbf{U}^n_\mathbf{i} + \mathbf{U}^*_\mathbf{i} - \Delta t (\nabla \cdot \mathbf{F}(\mathbf{U^*_\mathbf{i}})))
 \]</div>
-<p>where <span class="arithmatex">\(P_tot\)</span> is the total pressure, defined as the sum of the fluid pressure <span class="arithmatex">\(P\)</span> and the magnetic pressure:</p>
+<h2 id="hyperbolic-flux-calculation">Hyperbolic flux calculation</h2>
+<p>In order to solve the hyperbolic terms, we need to calculate the divergence of the flux. For this, we employ the Godunov method and use the divergence theorem to rewrite the evolution equation as the sum of the fluxes on the areas of the cell. We orient the fluxes toward the positive axes of the Cartesian domain, and thus, a positive flux on the "left" of a cell means "entering flux" while a positive flux on the "right" of a cell means "exiting flux". To simplify the following, we write the discretization in 1D but the 2D and 3D cases are discretized similarly along each directions:</p>
 <div class="arithmatex">\[
-P_{tot} = P + P_{mag} = P + \dfrac{1}{2}\mathbf{B}\cdot\mathbf{B}
+\dfrac{\partial \mathbf{F}(\mathbf{U}_i^n)}{\partial x} = \dfrac{1}{V_i}(A^x_{i-1/2} \mathbf{F}(\mathbf{U}_{i-1/2}) - A^x_{i+1/2} \mathbf{F}(\mathbf{U}_{i+1/2}))
 \]</div>
-<p>The conversion between the primitive and conservative variable is straight-forward except for the conversion between the total energy term and the total pressure term which requires an <strong>equation of state</strong>. For an <strong>ideal gas</strong>, we use the following relation : </p>
+<p>where <span class="arithmatex">\(A^x_{i-1/2}\)</span> is the area on the left face along the x direction, and similarly for the right face. Note that since Dyablo is using adaptive mesh refinement, in the case where the neighbor is non conformal and multiple, the left and/or right terms are representing a sum of fluxes multiplied by their corresponding areas.</p>
+<p>To simplify the following notations we write the flux at the interface as: </p>
 <div class="arithmatex">\[
-e = \dfrac{P}{\rho(\gamma-1)}
+\mathbf{F}_{i-1/2} := \mathbf{F}(\mathbf{U}^n_{i-1/2})
 \]</div>
-<p>with <span class="arithmatex">\(\gamma\)</span> the specific heat ratio.</p>
-<h2 id="equations_1">Equations</h2>
-<p>The equations solved are generally of the form of conservation equations with source terms : </p>
+<p>Every update along each direction is done at the same time in the <strong>unsplit Godunov</strong> way. If we were to write the complete update for the first order Euler timestepping on a regular 3D grid as an example, this would give:</p>
 <div class="arithmatex">\[
-\dfrac{\partial \mathbf{U}}{\partial t} + \nabla \cdot \mathbf{F}(\mathbf{Q}) = \mathbf{S}(\mathbf{U})
+\begin{split}
+\mathbf{U}^{n+1}_i = \mathbf{U}^n_i &amp;+ \dfrac{\Delta t}{\Delta x}(\mathbf{F}_{i-1/2} - \mathbf{F}_{i+1/2}) \\ 
+                                    &amp;+ \dfrac{\Delta t}{\Delta y}(\mathbf{G}_{j-1/2} - \mathbf{G}_{j+1/2}) \\
+                                    &amp;+ \dfrac{\Delta t}{\Delta z}(\mathbf{H}_{k-1/2} - \mathbf{H}_{k+1/2})
+\end{split}
 \]</div>
-<p>where <span class="arithmatex">\(\mathbf{F}\)</span> is a flux expressed as a function of the primitive variables and <span class="arithmatex">\(\mathbf{S}\)</span> a source term.</p>
-<p>More precisely, the Whole-Sun branch evolves the following equations:</p>
+<p>Where we only write the relevant indices for the fluxes. Also it is important to note here that the volume and area terms can be simplified since the grid is regular. This is not the case in AMR anymore where one flux can be the sum of multiple smaller fluxes in the case of a non-conformal neighbor. </p>
+<p>To calculate the update, we are left with the calculation of the values of the fluxes at the interfaces along each direction. To do this, we solve the <strong>Riemann problem</strong> at the interface between the <strong>primitive</strong> state on the left of the interface (<span class="arithmatex">\(\mathbf{Q}_L\)</span>) and the primitive state on the right of the interface (<span class="arithmatex">\(\mathbf{Q}_R\)</span>) : </p>
+<div class="arithmatex">\[
+\mathbf{F}_{i-1/2} = \mathbf{F}(\mathcal{R}(\mathbf{Q}^n_L, \mathbf{Q}^n_R))
+\]</div>
+<p>The Riemann solvers implemented in Dyablo are: </p>
 <ul>
-<li>
-<p><strong>Conservation of mass</strong>
-$$
-\dfrac{\partial \rho}{\partial t} + \nabla\cdot \rho\mathbf{u} = 0
-$$</p>
-</li>
-<li>
-<p><strong>Conservation of momentum</strong>
- $$
- \dfrac{\partial \rho\mathbf{u}}{\partial t} + \nabla \cdot (\rho\mathbf{u}\otimes\mathbf{u} - \mathbf{B}\otimes\mathbf{B} + P_{tot}\mathbb{I} - \nabla \cdot \tau) = \rho\mathbf{g}
- $$</p>
-</li>
+<li><strong>HLLC</strong> (Toro 2009) for Hydrodynamics problems</li>
+<li><strong>HLLD</strong> (Miyoshi, Kusano 2005) for MHD problems</li>
+<li><strong>Five-Waves</strong> (Bourgeois in prep 2024) for MHD problems</li>
 </ul>
-<p>where <span class="arithmatex">\(\mathbb{I}\)</span> is the identity matrix, <span class="arithmatex">\(\tau\)</span> the viscosity tensor and <span class="arithmatex">\(\mathbf{g}\)</span> the gravitational acceleration. The viscosity tensor is a <span class="arithmatex">\(ndim\times ndim\)</span> matrix whose elements are defined as follows : </p>
-<p>$$
- \tau_{ij} = \mu \left(\dfrac{\partial u_i}{\partial x_j} + \dfrac{\partial u_j}{\partial x_i} - \delta_i^j\dfrac{2}{3}(\nabla \cdot \mathbf{u})\right)
- $$
- with <span class="arithmatex">\(\delta_i^j\)</span> being the Kroenecker delta and <span class="arithmatex">\(\mu\)</span> the (shear) dynamic viscosity coefficient. Bulk viscosity is set to zero for the moment.</p>
+<h2 id="interface-values">Interface values</h2>
+<p>The reconstruction of the values at the interfaces before the resolution of the Riemann problem can be picked among three choices : </p>
 <ul>
-<li><strong>Conservation of energy</strong>
- $$
-\dfrac{\partial E_{tot}}{\partial t} + \nabla\cdot([E_{tot}+P_{tot}]\mathbf{u} - \mathbf{B}(\mathbf{B}\cdot\mathbf{u}) - \tau\cdot\mathbf{u} - \kappa \nabla T) = \rho\mathbf{u}\cdot \mathbf{g} + \mathcal{Q}
- $$</li>
+<li><strong>Piecewise constant method</strong> (order 1): <span class="arithmatex">\(\mathbf{Q}_{i-1/2} = \mathbf{Q}_i\)</span></li>
+<li><strong>Piecewise linear method</strong> (order 2): <span class="arithmatex">\(\mathbf{Q}_{i-1/2} = \mathbf{Q}_i - \dfrac{\Delta x}{2}\mathbf{S}_x\)</span>, with <span class="arithmatex">\(\mathbf{S}_x\)</span> a limited slope, as defined later.</li>
+<li><strong>Well-balanced</strong> (order 1) (Kappelli 2012), which uses a piecewise constant method for all the variables except the pressure which is reconstructed to guarantee hydrostatic equilibrium : <span class="arithmatex">\(P_{i-1/2} = P_i - \rho_i g \dfrac{\Delta x}{2}\)</span>. With <span class="arithmatex">\(g\)</span> the value of the gravitational acceleration along that direction.</li>
 </ul>
-<p>with <span class="arithmatex">\(\kappa\)</span> the thermal diffusion coefficient and <span class="arithmatex">\(T\)</span> the temperature. For an ideal gas EOS we have <span class="arithmatex">\(P = \mathcal{R}\rho T\)</span>. We set <span class="arithmatex">\(\mathcal{R} = 1\)</span> and thus we retrieve the temperature from the primitive variables as <span class="arithmatex">\(T = P/\rho\)</span>. Additionally, a volumetric cooling/heating term can be added in <span class="arithmatex">\(\mathcal{Q}\)</span>.</p>
-<ul>
-<li><strong>Induction equation</strong> (ideal MHD)
- $$
- \dfrac{\partial \mathbf{B}}{\partial t} - \nabla \times (\mathbf{u}\times\mathbf{B}) = 0
- $$</li>
-</ul>
-<p>Finally, we also need to guarantee that numerically, no magnetic monopoles form :</p>
-<ul>
-<li><strong>Solenoidal constraint</strong></li>
-</ul>
-<p>$$
- \nabla \cdot \mathbf{B} = 0
- $$</p>
-<h2 id="hyperbolic-fluxes">Hyperbolic fluxes</h2>
-<p>As mentioned previously, the general form of the equations takes the divergence of a flux and adds a source term. For a three-dimensional Cartesian grid, three fluxes intervene in the formulation of the equations, one along each direction:</p>
+<p>The slope <span class="arithmatex">\(\mathbf{S}_x\)</span> is calculated using the slope on the left, and the right of the cell, and is then limited: </p>
 <div class="arithmatex">\[
-\dfrac{\partial \mathbf{U}}{\partial t} + \dfrac{\partial \mathbf{F}(\mathbf{Q})}{\partial x} + \dfrac{\partial\mathbf{G}(\mathbf{Q})}{\partial y} + \dfrac{\partial \mathbf{H}(\mathbf{Q})}{\partial z} = \mathbf{S}(\mathbf{U})
+\begin{split}
+  \mathbf{S}_x^L &amp;= \dfrac{\mathbf{Q}_i-\mathbf{Q}_{i-1}}{\Delta x} \\
+  \mathbf{S}_x^R &amp;= \dfrac{\mathbf{Q}_{i+1}-\mathbf{Q}_{i}}{\Delta x} \\
+  \mathbf{S}_x &amp;= \Phi(\mathbf{S}_x^L, \mathbf{S}_x^R)
+\end{split}
 \]</div>
-<p>If we limit ourselves to the hyperbolic part of the equations, ignoring viscosity and thermal conduction, the fluxes are written as follows:</p>
+<p>with <span class="arithmatex">\(\Phi(a, b)\)</span> a slope limiter. Currently, in the Whole-Sun branch, only a <strong>minmod</strong> limiter is available:</p>
+<div class="arithmatex">\[
+\Phi_{minmod}(a, b) = \begin{cases}
+  0 &amp;\text{if } ab &lt; 0 \\
+  a &amp;\text{if } |a| &lt; |b| \\
+  b &amp;\text{else}
+\end{cases}
+\]</div>
+<h2 id="solenoidal-constraint">Solenoidal constraint</h2>
+<p>To guarantee the solenoidal constraint <span class="arithmatex">\(\nabla\cdot \mathbf{B}=0\)</span> we need to implement additional mechanisms. For now in Dyablo, two solutions are implemented:</p>
+<ul>
+<li>Using an entropy-preserving scheme (Five-Waves) to make sure <span class="arithmatex">\(\nabla \cdot \mathbf{B}\)</span> stays low and bounded.</li>
+<li>Using a Generalized Lagrange Method (GLM) for MHD (Dedner 2002).</li>
+</ul>
+<p>In the case of GLM-MHD, we need to include one additional variable <span class="arithmatex">\(\psi\)</span> that will account for the numerical error in <span class="arithmatex">\(\nabla\cdot\mathbf{B}\)</span>. The numerical scheme will then advect out of the domain (<strong>hyperbolic cleaning</strong>) and diffuse (<strong>parabolic cleaning</strong>). In practice, this requires to slightly modify the equations solved. Thus, the new conservative variable, primitive variable and associated flux become:</p>
+<div class="arithmatex">\[
+\begin{split}
+\mathbf{U} &amp;= [\rho, \rho \mathbf{u}, E_{tot}, \mathbf{B}, \psi]^T\\
+\mathbf{Q} &amp;= [\rho, \mathbf{u}, P_{tot}, \mathbf{B}, \psi]^T \\
+\end{split}
+\]</div>
 <div class="arithmatex">\[
 \mathbf{F}(\mathbf{Q}) = 
 \begin{pmatrix}
@@ -562,63 +623,37 @@ $$</p>
  \rho uv - B_xB_y \\
  \rho uw - B_xB_z \\
  (E_{tot}+P_{tot})u - B_z(\mathbf{u}\cdot\mathbf{B})\\ 
- 0 \\
+ \psi_m \\
  B_yu - B_xv \\
- B_zu - B_xw
+ B_zu - B_xw \\
+ ch^2 B_{xm}
 \end{pmatrix}
 \]</div>
+<p>With <span class="arithmatex">\(c_h\)</span> an hyperbolic cleaning constant that can be seen as an advection velocity. The values with subscripts <span class="arithmatex">\(m\)</span> are simply defined as the average between the quantities on each side of the interface when solving the Riemann problem.</p>
+<p>Parabolic cleaning is done outside of the hyperbolic step and is straightforward: </p>
 <div class="arithmatex">\[
-\mathbf{G}(\mathbf{Q}) = 
-\begin{pmatrix}
- \rho v \\
- \rho uv - B_yB_x\\
- \rho v^2 + P_{tot} - B_y^2 \\
- \rho uw - B_yB_z \\
- (E_{tot}+P_{tot})v - B_y(\mathbf{u}\cdot\mathbf{B})\\ 
- B_xv - B_yu \\
- 0 \\
- B_zv - B_yw
-\end{pmatrix}
+\psi^{n+1}_i = \psi^{n*}e^{-\Delta t c_h^2/c_p^2}
 \]</div>
+<p>With <span class="arithmatex">\(\psi^{n*}\)</span> the value of <span class="arithmatex">\(\psi\)</span> in the cell after the hyperbolic update and <span class="arithmatex">\(c_p\)</span> a diffusion coefficient. As per (Dedner 2002) we set </p>
 <div class="arithmatex">\[
-\mathbf{H}(\mathbf{Q}) = 
-\begin{pmatrix}
- \rho w \\
- \rho uw - B_zB_x\\
- \rho vw - B_zB_y\\
- \rho w^2 + P_{tot} - B_z^2 \\
- (E_{tot}+P_{tot})w - B_z(\mathbf{u}\cdot\mathbf{B})\\ 
- B_xw - B_zu \\
- B_yw - B_zv \\
- 0
-\end{pmatrix}
+c_h := \dfrac{C}{\Delta t}\min_{d={x,y,z}}(\Delta d)
 \]</div>
-<h2 id="source-terms">Source Terms</h2>
-<p>For now, the only source terms added in the simulation are the gravitational effects, and potential cooling. The source term vector takes the following form :</p>
+<p>where <span class="arithmatex">\(C\)</span> is the limiting constant associated with the MHD CFL calculation. </p>
+<p>To define <span class="arithmatex">\(c_p\)</span> we use a proxy parameter <span class="arithmatex">\(c_r\)</span> defined by the user, and such that </p>
 <div class="arithmatex">\[
-\mathbf{S}(\mathbf{U}) = 
-\begin{pmatrix}
-0\\
-\rho g_x\\
-\rho g_y\\
-\rho g_z\\
-\rho \mathbf{u}\cdot\mathbf{g} + \mathcal{Q}\\
-0\\
-0\\
-0\\
-\end{pmatrix}
+c_p = \sqrt{c_rc_h}
 \]</div>
+<p>The value of <span class="arithmatex">\(c_r\)</span> is left to the user, but by default is set to <span class="arithmatex">\(0.1\)</span> (see discussion after eq (46) in (Dedner 2002) for more information on this parameter).</p>
+<h2 id="timestep-calculation">Timestep calculation</h2>
+<p>TODO</p>
 <h2 id="future-considerations">Future considerations</h2>
-<p>For the future of the project, additional terms will have to be taken into account:</p>
 <ul>
-<li>Non-ideal MHD : Resistivity, Hall-effect and Ambipolar diffusion</li>
-<li>Radiative transfer : Moments, short-characteristics, or Monte-Carlo</li>
-<li>Non-ideal equations of state</li>
-<li>Rotation : f-plane and full domain rotation with sphere mapping</li>
-<li>Forcing term for the magnetic field</li>
-<li>Potential boundary-conditions</li>
-<li>Multi-species</li>
+<li>Implicit solvers for parabolic treatments</li>
+<li>2nd order well-balanced scheme</li>
+<li>All-Mach schemes</li>
+<li>Constraint-Transport</li>
 </ul>
+<h2 id="references">References</h2>
 
 
 
