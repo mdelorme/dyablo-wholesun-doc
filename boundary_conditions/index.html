@@ -715,9 +715,9 @@ F_{\rho u} = P_L = P_R - \Delta x \rho g
  \rho uw \\
  (E_{tot}+P_{tot})u - B_x^2u\\ 
  \dfrac{1}{2}\psi \\
- B_xv \\
- B_xw \\
- ch^2 B_x
+ -B_xv \\
+ -B_xw \\
+ c_h^2 B_x
 \end{pmatrix}
 \]</div>
 <p>Now we need to pay extra attention to the <span class="arithmatex">\(E_{tot}\)</span> and <span class="arithmatex">\(P_{tot}\)</span> terms that have been modified. In this case : </p>
@@ -732,22 +732,21 @@ P_{tot} = P_{gas} + P_{mag} = P_{gas} + \dfrac{1}{2}B_x^2
 <ul>
 <li>Parallel magnetic field is null: <span class="arithmatex">\(B_y = B_z = 0\)</span>.</li>
 <li>Normal velocity is null: <span class="arithmatex">\(u=0\)</span>.</li>
-<li>Gas pressure is reconstructed from HSE: <span class="arithmatex">\(P_{gas} = P_R - \Delta x \rho g_x\)</span></li>
-<li>Total pressure is thus: <span class="arithmatex">\(P_{tot} = P_R - \Delta x \rho g_x + 1/2B_x^2\)</span></li>
-<li>Finally the momentum flux follows: <span class="arithmatex">\(P_{tot} - B_x^2 = P_R - \Delta x \rho g_x - 1/2B_x^2\)</span></li>
+<li>Total pressure is reconstructed from HSE: <span class="arithmatex">\(P_{tot} = P_R - \Delta x \rho g_x\)</span></li>
+<li>Finally the momentum flux follows: <span class="arithmatex">\(P_{tot} - B_x^2 = P_R - \Delta x \rho g_x - B_x^2\)</span></li>
 </ul>
 <p>Then the flux is written as follows:</p>
 <div class="arithmatex">\[
 \mathbf{F}_{NFWB} = \begin{pmatrix}
  0 \\
- P_R - \Delta x \rho g_x - \dfrac{1}{2}B_x^2 \\
+ P_R - \Delta x \rho g_x - B_x^2 \\
  0 \\
  0 \\
- -B_x^2u\\ 
+ 0\\ 
  \dfrac{1}{2}\psi \\
  -B_xv \\
  -B_xw \\
- ch^2 B_x
+ c_h^2 B_x
 \end{pmatrix}
  \]</div>
 
